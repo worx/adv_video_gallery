@@ -544,7 +544,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Gallery';
+  $display->title = 'Video Gallery';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();

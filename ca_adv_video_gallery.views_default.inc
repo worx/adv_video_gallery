@@ -620,8 +620,8 @@ function ca_adv_video_gallery_views_default_views() {
     'ca_adv_video_gallery' => 'ca_adv_video_gallery',
   );
 
-  /* Display: CA Adv Video Gallery Admin Sort: Parent Gallery Sort */
-  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery Admin Sort: Parent Gallery Sort', 'ca_adv_video_gallery_sort_parent_gallery_sort');
+  /* Display: CA Adv Video Gallery Sort: Parent Gallery Sort */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery Sort: Parent Gallery Sort', 'ca_adv_video_gallery_sort_parent');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -639,10 +639,15 @@ function ca_adv_video_gallery_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'ca_adv_video_gallery' => 'ca_adv_video_gallery',
   );
-  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery Admin Sort: Parent Gallery Sort';
+  /* Filter criterion: Content: Parent Video Gallery (field_ca_adv_videog_p_gallery) */
+  $handler->display->display_options['filters']['field_ca_adv_videog_p_gallery_target_id']['id'] = 'field_ca_adv_videog_p_gallery_target_id';
+  $handler->display->display_options['filters']['field_ca_adv_videog_p_gallery_target_id']['table'] = 'field_data_field_ca_adv_videog_p_gallery';
+  $handler->display->display_options['filters']['field_ca_adv_videog_p_gallery_target_id']['field'] = 'field_ca_adv_videog_p_gallery_target_id';
+  $handler->display->display_options['filters']['field_ca_adv_videog_p_gallery_target_id']['operator'] = 'empty';
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery Sort: Parent Gallery Sort';
 
-  /* Display: CA Adv Video Gallery Admin Sort: Sub-Gallery Sort */
-  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery Admin Sort: Sub-Gallery Sort', 'ca_adv_video_gallery_sort_sub_gallery_sort');
+  /* Display: CA Adv Video Gallery Sort: Sub-Gallery Sort */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery Sort: Sub-Gallery Sort', 'ca_adv_video_gallery_sort_sub_gallery_sort');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Parent Video Gallery (field_ca_adv_videog_p_gallery) */
@@ -654,10 +659,10 @@ function ca_adv_video_gallery_views_default_views() {
   $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery Admin Sort: Sub-Gallery Sort';
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery Sort: Sub-Gallery Sort';
 
-  /* Display: CA Adv Video Gallery Admin Sort: Video sort */
-  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery Admin Sort: Video sort', 'ca_adv_video_gallery_sort_video_sort');
+  /* Display: CA Adv Video Gallery Sort: Video sort */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery Sort: Video sort', 'ca_adv_video_gallery_sort_video_sort');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Video Gallery Parent (field_ca_video_gallery_parent) */
@@ -685,7 +690,7 @@ function ca_adv_video_gallery_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'ca_adv_video_gallery_video' => 'ca_adv_video_gallery_video',
   );
-  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery Admin Sort: Video Sort';
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery Sort: Video Sort';
   $export['ca_adv_video_gallery_sort'] = $view;
 
   $view = new view();

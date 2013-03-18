@@ -464,10 +464,12 @@ function ca_adv_video_gallery_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 0,
+          'module' => 'file_entity',
+          'settings' => array(
+            'file_view_mode' => 'worxco_video_displays_small',
+          ),
+          'type' => 'file_rendered',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',

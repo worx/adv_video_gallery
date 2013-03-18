@@ -27,7 +27,8 @@ function ca_adv_video_gallery_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'adv video gallery admin',
-      2 => 'webmaster',
+      2 => 'adv video gallery creator',
+      3 => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -71,7 +72,8 @@ function ca_adv_video_gallery_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'adv video gallery admin',
-      2 => 'webmaster',
+      2 => 'adv video gallery creator',
+      3 => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -115,7 +117,8 @@ function ca_adv_video_gallery_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'adv video gallery admin',
-      2 => 'webmaster',
+      2 => 'adv video gallery creator',
+      3 => 'webmaster',
     ),
     'module' => 'node',
   );

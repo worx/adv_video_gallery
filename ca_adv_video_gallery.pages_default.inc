@@ -199,6 +199,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
             0 => 3,
             1 => 250184028,
             2 => 4,
+            3 => 135507392,
           ),
         ),
         'context' => 'logged-in-user',
@@ -668,6 +669,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
             0 => 3,
             1 => 250184028,
             2 => 4,
+            3 => 135507392,
           ),
         ),
         'context' => 'logged-in-user',
@@ -711,13 +713,32 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'CA Adv Video Gallery Admin: Video Admin',
+    'title' => 'CA Adv Video Gallery Admin: Video Creator Admin',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 3,
+              1 => 250184028,
+              2 => 4,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -770,6 +791,75 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $display->panels['middle'][1] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-6';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_video_gallery_video_admin_panel_context_2';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_video_gallery_video_admin';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'CA Adv Video Gallery Admin: Video Creator Admin',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 135507392,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_video-ca_adv_vg_video_creator_admin';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['center'][0] = 'new-7';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_adv_video_gallery_video_admin'] = $page;
@@ -868,7 +958,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_adv_video_gallery_sort-ca_adv_video_gallery_sort_video_sort';
@@ -883,10 +973,10 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['center'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['center'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-7';
+  $display->title_pane = 'new-8';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_adv_video_gallery_video_sort'] = $page;

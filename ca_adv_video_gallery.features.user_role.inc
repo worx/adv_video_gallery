@@ -17,5 +17,12 @@ function ca_adv_video_gallery_user_default_roles() {
     'machine_name' => 'adv_video_gallery_admin',
   );
 
+  // Exported role: adv video gallery creator.
+  $roles['adv video gallery creator'] = array(
+    'name' => 'adv video gallery creator',
+    'weight' => '6',
+    'machine_name' => 'adv_video_gallery_creator',
+  );
+
   return $roles;
 }

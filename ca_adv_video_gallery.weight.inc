@@ -15,7 +15,7 @@ function ca_adv_video_gallery_default_weight_settings() {
   $settings->api_version = 1;
   $settings->id = '2';
   $settings->type = 'ca_adv_video_gallery';
-  $settings->weight_enabled = FALSE;
+  $settings->weight_enabled = TRUE;
   $settings->weight_range = TRUE;
   $settings->menu_weight = FALSE;
   $settings->weight_default = FALSE;
@@ -26,7 +26,7 @@ function ca_adv_video_gallery_default_weight_settings() {
   $settings->api_version = 1;
   $settings->id = '1';
   $settings->type = 'ca_adv_video_gallery_video';
-  $settings->weight_enabled = FALSE;
+  $settings->weight_enabled = TRUE;
   $settings->weight_range = TRUE;
   $settings->menu_weight = FALSE;
   $settings->weight_default = FALSE;

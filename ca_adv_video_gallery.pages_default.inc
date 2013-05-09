@@ -61,7 +61,7 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery-ca_adv_video_gallery_sub_list_1';
+    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_sub_list_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -72,14 +72,14 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-1'] = $pane;
     $display->panels['middle'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery_video-ca_adv_video_gallery_video_list_1';
+    $pane->subtype = 'ca_adv_video_gallery_video_list-video_list_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -339,11 +339,128 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     'context_admin_options_items' => 'ca_adv_video_gallery',
     'context_admin_use_node_edit' => 0,
     'submitted_context' => 'argument_entity_id:node_1',
-    'context_admin_field' => 'field_ca_adv_video_gallery_parent_gallery',
+    'context_admin_field' => 'field_ca_adv_videog_p_gallery',
     'context_admin_custom_redirect' => '',
   );
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_adv_video_gallery_add_sub_gallery'] = $page;
+
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'ca_adv_video_gallery_admin_gallery_sort';
+  $page->task = 'page';
+  $page->admin_title = 'CA Adv Video Gallery Admin: Gallery Sort';
+  $page->admin_description = '';
+  $page->path = 'node/%node/video-admin/gallery_sort_order';
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'node_type',
+        'settings' => array(
+          'type' => array(
+            'ca_adv_video_gallery' => 'ca_adv_video_gallery',
+          ),
+        ),
+        'context' => 'argument_entity_id:node_1',
+        'not' => FALSE,
+      ),
+      1 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 3,
+            1 => 250184028,
+            2 => 4,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
+  );
+  $page->menu = array(
+    'type' => 'tab',
+    'title' => 'Sort Gallery',
+    'name' => 'navigation',
+    'weight' => '5',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array(
+    'node' => array(
+      'id' => 1,
+      'identifier' => 'Node: ID',
+      'name' => 'entity_id:node',
+      'settings' => array(),
+    ),
+  );
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_video_gallery_admin_gallery_sort_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_video_gallery_admin_gallery_sort';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'CA Adv Video Gallery Admin: Gallery Sort',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-1';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_sort-ca_adv_video_gallery_sub_sort';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-1'] = $pane;
+    $display->panels['center'][0] = 'new-1';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['ca_adv_video_gallery_admin_gallery_sort'] = $page;
 
   $page = new stdClass();
   $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
@@ -420,10 +537,10 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery-ca_adv_video_gallery_admin';
+    $pane->subtype = 'ca_adv_video_gallery_admin-ca_adv_video_gallery_admin';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -434,11 +551,11 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
-    $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['middle'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_adv_video_gallery_gallery_administration'] = $page;
@@ -518,10 +635,10 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-3';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery_sort-ca_adv_video_gallery_sort_parent';
+    $pane->subtype = 'ca_adv_video_gallery_sort-ca_adv_video_gallery_sort';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -533,8 +650,8 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['middle'][0] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['middle'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -601,10 +718,10 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery-ca_adv_video_gallery_sub_list_1';
+    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_list_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -616,26 +733,8 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['middle'][0] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery-ca_adv_video_gallery_list_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
     $display->content['new-4'] = $pane;
-    $display->panels['middle'][1] = 'new-4';
+    $display->panels['middle'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -757,7 +856,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $pane->pid = 'new-5';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery-ca_adv_video_gallery_sub_admin';
+    $pane->subtype = 'ca_adv_video_gallery_admin-ca_adv_video_gallery_sub_admin';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -768,14 +867,14 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-5'] = $pane;
     $display->panels['middle'][0] = 'new-5';
     $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery_video-ca_adv_video_gallery_video_admin';
+    $pane->subtype = 'ca_adv_video_gallery_admin-ca_adv_video_gallery_video_admin';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -786,11 +885,11 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-6'] = $pane;
     $display->panels['middle'][1] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-6';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $handler = new stdClass();
@@ -844,7 +943,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $pane->pid = 'new-7';
     $pane->panel = 'center';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery_video-ca_adv_vg_video_creator_admin';
+    $pane->subtype = 'ca_adv_video_gallery_admin-ca_adv_vg_video_creator_admin';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -903,9 +1002,9 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   );
   $page->menu = array(
     'type' => 'tab',
-    'title' => 'Sort',
+    'title' => 'Sort Video',
     'name' => 'navigation',
-    'weight' => '1',
+    'weight' => '10',
     'parent' => array(
       'type' => 'none',
       'title' => '',
@@ -976,7 +1075,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     $display->content['new-8'] = $pane;
     $display->panels['center'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-8';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_adv_video_gallery_video_sort'] = $page;

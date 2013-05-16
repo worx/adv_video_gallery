@@ -28,7 +28,7 @@ function ca_adv_video_gallery_user_default_permissions() {
       'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'adv video gallery creator' => 'adv video gallery creator',
-      'webmaster => 'webmaster',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -48,7 +48,7 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['delete any ca_adv_video_gallery_video content'] = array(
     'name' => 'delete any ca_adv_video_gallery_video content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'webmaster' => 'webmaster',
     ),
@@ -73,7 +73,7 @@ function ca_adv_video_gallery_user_default_permissions() {
       'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'adv video gallery creator' => 'adv video gallery creator',
-      'webmaster => 'webmaster',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -118,7 +118,7 @@ function ca_adv_video_gallery_user_default_permissions() {
       'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'adv video gallery creator' => 'adv video gallery creator',
-      'webmaster => 'webmaster',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );

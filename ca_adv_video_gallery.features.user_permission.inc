@@ -14,7 +14,7 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['create ca_adv_video_gallery content'] = array(
     'name' => 'create ca_adv_video_gallery content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'webmaster' => 'webmaster',
     ),
@@ -25,10 +25,10 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['create ca_adv_video_gallery_video content'] = array(
     'name' => 'create ca_adv_video_gallery_video content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'adv video gallery admin',
-      2 => 'adv video gallery creator',
-      3 => 'webmaster',
+      'administrator' => 'administrator',
+      'adv video gallery admin' => 'adv video gallery admin',
+      'adv video gallery creator' => 'adv video gallery creator',
+      'webmaster => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -37,7 +37,7 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['delete any ca_adv_video_gallery content'] = array(
     'name' => 'delete any ca_adv_video_gallery content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'webmaster' => 'webmaster',
     ),
@@ -59,7 +59,7 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['delete own ca_adv_video_gallery content'] = array(
     'name' => 'delete own ca_adv_video_gallery content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'webmaster' => 'webmaster',
     ),
@@ -70,10 +70,10 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['delete own ca_adv_video_gallery_video content'] = array(
     'name' => 'delete own ca_adv_video_gallery_video content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'adv video gallery admin',
-      2 => 'adv video gallery creator',
-      3 => 'webmaster',
+      'administrator' => 'administrator',
+      'adv video gallery admin' => 'adv video gallery admin',
+      'adv video gallery creator' => 'adv video gallery creator',
+      'webmaster => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -82,7 +82,7 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['edit any ca_adv_video_gallery content'] = array(
     'name' => 'edit any ca_adv_video_gallery content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'webmaster' => 'webmaster',
     ),
@@ -93,7 +93,7 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['edit any ca_adv_video_gallery_video content'] = array(
     'name' => 'edit any ca_adv_video_gallery_video content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'webmaster' => 'webmaster',
     ),
@@ -104,7 +104,7 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['edit own ca_adv_video_gallery content'] = array(
     'name' => 'edit own ca_adv_video_gallery content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'adv video gallery admin' => 'adv video gallery admin',
       'webmaster' => 'webmaster',
     ),
@@ -115,10 +115,10 @@ function ca_adv_video_gallery_user_default_permissions() {
   $permissions['edit own ca_adv_video_gallery_video content'] = array(
     'name' => 'edit own ca_adv_video_gallery_video content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'adv video gallery admin',
-      2 => 'adv video gallery creator',
-      3 => 'webmaster',
+      'administrator' => 'administrator',
+      'adv video gallery admin' => 'adv video gallery admin',
+      'adv video gallery creator' => 'adv video gallery creator',
+      'webmaster => 'webmaster',
     ),
     'module' => 'node',
   );

@@ -38,15 +38,17 @@ function ca_adv_video_gallery_menu() {
  * implements hook_menu_alter().
  */
 function ca_adv_video_gallery_menu_alter(&$items) {
-  $items['gallery']['title'] = variable_get('ca_adv_video_gallery_menu_title', 'Video Gallery');
+  $items['video-gallery']['title'] = variable_get('ca_adv_video_gallery_menu_title', 'Video Gallery');
 }
 
 /**
  * Implements hook_panels_pre_render().
  */
 function ca_adv_video_gallery_panels_pre_render($panel, $renderer) {
-  if (isset($panel->content['new-9']) && $panel->content['new-9']->subtype == 'ca_adv_video_gallery-ca_adv_video_gallery_list_1') {
-    $panel->title = variable_get('ca_adv_video_gallery_panel_title', 'Video Gallery');
+  foreach ($panel->content as $key => $value) {
+    if ($value->subtype == 'ca_adv_video_gallery_list-ca_adv_video_gallery_list_1') {
+      $panel->title = variable_get('ca_adv_video_gallery_panel_title', 'Video Gallery');
+    }
   }
 }
 

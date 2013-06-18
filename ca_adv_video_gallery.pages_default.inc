@@ -42,7 +42,7 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'ca-video-galllery-category-list ca-video-gallery-category-list-template-1',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -419,7 +419,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'ca-admin ca-video-galllery-admin',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -522,6 +522,8 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-admin ca-video-galllery-admin',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -615,7 +617,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'ca-admin ca-video-galllery-admin',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -703,6 +705,8 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-video-galllery-list ca-video-gallery-list-template-1',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -837,7 +841,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'ca-admin ca-video-galllery-admin',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -905,7 +909,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'ca-admin ca-video-galllery-admin',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -1037,7 +1041,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'ca-admin ca-video-galllery-admin',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),

@@ -26,4 +26,9 @@ function ca_adv_video_gallery_install() {
 	$imce_roles_profiles[135507392] = $imce_roles_profiles_vaule;
 	
   variable_set('imce_roles_profiles', $imce_roles_profiles);
+	
+  // Set the Pathauto for the node.
+  variable_set('pathauto_node_ca_adv_video_gallery_pattern', 'video-gallery/[node:field_ca_adv_videog_p_gallery]/[node:title]');
+
+  variable_set('pathauto_node_ca_adv_video_gallery_video_pattern', 'video-gallery/[node:field_ca_video_gallery_parent]/[node:title]');
 }

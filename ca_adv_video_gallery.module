@@ -20,7 +20,7 @@ function ca_adv_video_gallery_menu() {
     'file path' => drupal_get_path('module', 'ca_adv_video_gallery'),
     'type' => MENU_NORMAL_ITEM,
   );
-  $items['admin/config/worx_features/gallery/general'] = array(
+  $items['admin/config/worx_features/adv_gallery/general'] = array(
     'title' => 'General Settings',
     'description' => 'Override settings for ca_adv_video_gallery',
     'page callback' => 'drupal_get_form',

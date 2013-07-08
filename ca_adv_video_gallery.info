@@ -1,5 +1,5 @@
-name = CA Advanced Video Gallery Admin
-description = CA Advanced Video Gallery Admin adds an image gallery complete with layered sub-galleries and contextual administration.
+name = CA Advanced Video Gallery
+description = CA Advanced Video Gallery adds an image gallery complete with layered sub-galleries and contextual administration.
 core = 7.x
 package = Features
 php = 5.2.4

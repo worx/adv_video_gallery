@@ -393,6 +393,8 @@ function ca_adv_video_gallery_views_default_views() {
   $handler->display->display_options['fields']['field_ca_adv_videog_vg_image']['field'] = 'field_ca_adv_videog_vg_image';
   $handler->display->display_options['fields']['field_ca_adv_videog_vg_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_adv_videog_vg_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_adv_videog_vg_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_adv_videog_vg_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_adv_videog_vg_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_adv_videog_vg_image']['settings'] = array(
     'image_style' => 'worxco_video_small',

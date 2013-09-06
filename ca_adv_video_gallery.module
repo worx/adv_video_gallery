@@ -10,8 +10,8 @@ include_once('ca_adv_video_gallery.features.inc');
  * Implements hook_menu()
  */
 function ca_adv_video_gallery_menu() {
-  $items['admin/config/worx_features/gallery'] = array(
-    'title' => 'Gallery Configuration',
+  $items['admin/config/worx_features/adv_gallery'] = array(
+    'title' => 'Adv Video Gallery Configuration',
     'description' => 'Override settings for ca_adv_video_gallery',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('ca_adv_video_gallery_settings_form'),
@@ -58,8 +58,10 @@ function ca_adv_video_gallery_panels_pre_render($panel, $renderer) {
 function ca_adv_video_gallery_views_pre_view(&$view, &$display_id, &$args) {
   if ($display_id == 'ca_adv_video_gallery_list_1') {
     $view->set_items_per_page(variable_get('ca_adv_video_gallery_list_count', 16));
-  }
-  elseif ($display_id == 'ca_adv_video_gallery_video_list_1') {
+  } elseif ($display_id == 'ca_adv_video_gallery_sub_list_1') {
+    $view->set_items_per_page(variable_get('ca_adv_video_gallery_list_count', 16));
+  }	
+  if ($display_id == 'ca_adv_video_gallery_video_list_1') {
     $view->set_items_per_page(variable_get('ca_adv_video_gallery_video_list_count', 16));
   }
 }

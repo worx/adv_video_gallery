@@ -19,7 +19,7 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'CA Adv Video Gallery: Gallery Video View',
+    'title' => 'CA Adv Video Gallery: Gallery Video View Template 1',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -36,6 +36,13 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
             ),
           ),
           'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_video_gallery_list_template',
+          'settings' => array(
+            'ca_adv_video_gallery_list_template' => 'ca_adv_video_gallery_list_template_one',
+          ),
           'not' => FALSE,
         ),
       ),
@@ -79,7 +86,7 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery_video_list-video_list_1';
+    $pane->subtype = 'ca_adv_video_gallery_video_list-adv_video_list_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();

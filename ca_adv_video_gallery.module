@@ -57,11 +57,24 @@ function ca_adv_video_gallery_panels_pre_render($panel, $renderer) {
  */
 function ca_adv_video_gallery_views_pre_view(&$view, &$display_id, &$args) {
   if ($display_id == 'ca_adv_video_gallery_list_1') {
-    $view->set_items_per_page(variable_get('ca_adv_video_gallery_list_count', 16));
+    $view->set_items_per_page(variable_get('ca_adv_video_gallery_list_count', 12));
   } elseif ($display_id == 'ca_adv_video_gallery_sub_list_1') {
-    $view->set_items_per_page(variable_get('ca_adv_video_gallery_list_count', 16));
-  }	
-  if ($display_id == 'ca_adv_video_gallery_video_list_1') {
-    $view->set_items_per_page(variable_get('ca_adv_video_gallery_video_list_count', 16));
+    $view->set_items_per_page(variable_get('ca_adv_video_gallery_sub_list_count', 3));
+  }
+  if ($display_id == 'adv_video_list_1') {
+    $view->set_items_per_page(variable_get('ca_adv_video_gallery_video_grid_count', 12));
+  } elseif ($display_id == 'adv_video_list_2') {
+    $view->set_items_per_page(variable_get('ca_adv_video_gallery_video_grid_count', 8));
+  } elseif ($display_id == 'adv_video_list_3') {
+    $view->set_items_per_page(variable_get('ca_adv_video_gallery_video_list_count', 4));
+  }
+}
+
+/**
+ * Implementation of hook_ctools_plugin_directory()
+ */
+function ca_adv_video_gallery_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools') {
+    return 'plugins/' . $plugin_type;
   }
 }

@@ -114,6 +114,48 @@ function ca_adv_video_gallery_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ca_adv_video_gallery_video-body'
+  $field_instances['node-ca_adv_video_gallery_video-body'] = array(
+    'bundle' => 'ca_adv_video_gallery_video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => 0,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-ca_adv_video_gallery_video-field_ca_video_gallery_parent'
   $field_instances['node-ca_adv_video_gallery_video-field_ca_video_gallery_parent'] = array(
     'bundle' => 'ca_adv_video_gallery_video',
@@ -153,7 +195,7 @@ function ca_adv_video_gallery_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -222,6 +264,7 @@ function ca_adv_video_gallery_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Body');
   t('Gallery Image');
   t('Parent Video Gallery');
   t('Video');

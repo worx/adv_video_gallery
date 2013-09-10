@@ -34,16 +34,51 @@ function ca_adv_video_gallery_settings_form() {
     $form['ca_adv_video_gallery_list_count'] = array(
     '#type' => 'textfield',
     '#title' => t('Number of galleries to display'),
-    '#default_value' => variable_get('ca_adv_video_gallery_list_count', 16),
+    '#default_value' => variable_get('ca_adv_video_gallery_list_count', 12),
     '#required' => TRUE,
-    '#description' => t('How many videos would you like displayed per page?'),
+    '#description' => t('How many galleries would you like displayed per page? Suggested in groups for 3.'),
+  );
+    $form['ca_adv_video_gallery_sub_list_count'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Number of sub galleries to display'),
+    '#default_value' => variable_get('ca_adv_video_gallery_sub_list_count', 3),
+    '#required' => TRUE,
+    '#description' => t('How many sub galleries would you like displayed per page? Suggested in groups for 3.'),
+  );
+  $form['ca_adv_video_gallery_video_grid_count'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Number of videos to display in the grid'),
+    '#default_value' => variable_get('ca_adv_video_gallery_video_grid_count', 12),
+    '#required' => TRUE,
+    '#description' => t('How many videos would you like displayed per page? Template 1 suggested in groups for 3. Template 2 suggested in groups for 2.'),
   );
   $form['ca_adv_video_gallery_video_list_count'] = array(
     '#type' => 'textfield',
-    '#title' => t('Number of images to display'),
-    '#default_value' => variable_get('ca_adv_video_gallery_video_list_count', 16),
+    '#title' => t('Number of videos to display in the grid'),
+    '#default_value' => variable_get('ca_adv_video_gallery_video_list_count', 4),
     '#required' => TRUE,
-    '#description' => t('How many videos would you like displayed in the block?'),
+    '#description' => t('How many videos would you like displayed per page? Template 3.'),
+  );
+  $form['ca_adv_video_gallery_list_template'] = array(
+    '#type' => 'select',
+    '#title' => t('Video Galleries Video list template'),
+    '#options' => array(
+      'ca_adv_video_gallery_list_template_one' => t('Template one'),
+      'ca_adv_video_gallery_list_template_two' => t('Template two'),
+      'ca_adv_video_gallery_list_template_three' => t('Template three'),
+    ),
+    '#required' => TRUE,
+    '#default_value' => variable_get('ca_adv_video_gallery_list_template', 'ca_adv_video_gallery_list_template_one'),
+  );
+  $form['ca_adv_video_gallery_node_template'] = array(
+    '#type' => 'select',
+    '#title' => t('Video Galleries Video Node template'),
+    '#options' => array(
+      'ca_adv_video_gallery_node_template_one' => t('Template one'),
+      'ca_adv_video_gallery_node_template_two' => t('Template two'),
+    ),
+    '#required' => TRUE,
+    '#default_value' => variable_get('ca_adv_video_gallery_node_template', 'ca_adv_video_gallery_node_template_one'),
   );
   
   return system_settings_form($form);

@@ -2,10 +2,14 @@
   background: none repeat scroll 0 0 transparent;
 }
 
-.view-ca-adv-video-gallery tr td, .view-ca-adv-video-gallery-image tr td {
-  width: 25%
+.view-ca-adv-video-gallery-list tr td, .view-ca-adv-video-gallery-video-list tr td {
+  text-align: center;
 }
 
-.view-ca-adv-video-gallery tr td, .view-ca-adv-video-gallery tr th, .view-ca-adv-video-gallery-image tr td,  .view-ca-adv-video-gallery-image tr th {
-  text-align: center;
+.ca-video-list-template-3 .views-field-field-ca-video-v-video {float: left; padding: 0 15px 5px 0;}
+.ca-video-list-template-3 .views-field-nothing {border-bottom: 1px solid #000; clear: both; margin-bottom: 7px; padding-top: 5px;}
+
+.ca-video-node .views-field-field-ca-video-v-video {
+  float: left;
+  padding: 5px 10px;
 }

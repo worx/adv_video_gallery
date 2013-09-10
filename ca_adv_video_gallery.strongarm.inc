@@ -153,10 +153,10 @@ function ca_adv_video_gallery_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'display' => array(),

@@ -10,7 +10,7 @@
  * by the system that includes this file.
  */
 $plugin = array(
-  'title' => t('Video Gallery: node type'),
+  'title' => t('Adv Video Gallery: node type'),
   'description' => t('Control access by adv video gallery node type.'),
   'callback' => 'ca_adv_video_gallery_node_template_access_check',
   'settings form' => 'ca_adv_video_gallery_node_template_access_settings',

@@ -54,7 +54,7 @@ function ca_adv_video_gallery_settings_form() {
   );
   $form['ca_adv_video_gallery_video_list_count'] = array(
     '#type' => 'textfield',
-    '#title' => t('Number of videos to display in the grid'),
+    '#title' => t('Number of videos to display in the list'),
     '#default_value' => variable_get('ca_adv_video_gallery_video_list_count', 4),
     '#required' => TRUE,
     '#description' => t('How many videos would you like displayed per page? Template 3.'),

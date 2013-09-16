@@ -10,7 +10,7 @@
  * by the system that includes this file.
  */
 $plugin = array(
-  'title' => t('Video Gallery: Video list type'),
+  'title' => t('Adv Video Gallery: Video list type'),
   'description' => t('Control access by adv video gallery list type.'),
   'callback' => 'ca_adv_video_gallery_list_template_access_check',
   'settings form' => 'ca_adv_video_gallery_list_template_access_settings',

@@ -31,4 +31,58 @@ function ca_adv_video_gallery_install() {
   variable_set('pathauto_node_ca_adv_video_gallery_pattern', 'video-gallery/[node:field_ca_adv_videog_p_gallery]/[node:title]');
 
   variable_set('pathauto_node_ca_adv_video_gallery_video_pattern', 'video-gallery/[node:field_ca_video_gallery_parent]/[node:title]');
+  
+  // Sets the Video Gallery Admin role to have permission to create files.
+  $insert = db_insert('role_permission')
+    ->fields(array(
+      'rid' => '250184028',
+      'permission' => 'create files',
+      'module' => 'file_entity',
+    ))
+    ->execute();
+  
+  // Sets the Video Gallery Admin role to have permission to access media browser.
+  $insert = db_insert('role_permission')
+    ->fields(array(
+      'rid' => '250184028',
+      'permission' => 'access media browser',
+      'module' => 'media',
+    ))
+    ->execute();
+  
+  // Sets the Video Gallery Admin role to have permission to add media from remote sources.
+  $insert = db_insert('role_permission')
+    ->fields(array(
+      'rid' => '250184028',
+      'permission' => 'add media from remote sources',
+      'module' => 'media_internet',
+    ))
+    ->execute();
+  
+  // Sets the Video Gallery Creator role to have permission to create files.
+  $insert = db_insert('role_permission')
+    ->fields(array(
+      'rid' => '135507392',
+      'permission' => 'create files',
+      'module' => 'file_entity',
+    ))
+    ->execute();
+  
+  // Sets the Video Gallery Creator role to have permission to access media browser.
+  $insert = db_insert('role_permission')
+    ->fields(array(
+      'rid' => '135507392',
+      'permission' => 'access media browser',
+      'module' => 'media',
+    ))
+    ->execute();
+  
+  // Sets the Video Gallery Creator role to have permission to add media from remote sources.
+  $insert = db_insert('role_permission')
+    ->fields(array(
+      'rid' => '135507392',
+      'permission' => 'add media from remote sources',
+      'module' => 'media_internet',
+    ))
+    ->execute();
 }

@@ -437,15 +437,15 @@ function ca_adv_video_gallery_views_default_views() {
   $handler->display->display_options['filters']['field_ca_adv_videog_p_gallery_target_id']['field'] = 'field_ca_adv_videog_p_gallery_target_id';
   $handler->display->display_options['filters']['field_ca_adv_videog_p_gallery_target_id']['operator'] = 'empty';
 
-  /* Display: CA Adv Video Gallery: Gallery List View Template One */
-  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Gallery List View Template One', 'ca_adv_video_gallery_list_1');
+  /* Display: CA Adv Video Gallery: Gallery List Grid View Template One */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Gallery List Grid View Template One', 'ca_adv_video_gallery_list_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Gallery List View Template One';
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Gallery List Grid View Template One';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
 
-  /* Display: CA Adv Video Gallery: Sub Gallery View List Template One */
-  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Sub Gallery View List Template One', 'ca_adv_video_gallery_sub_list_1');
+  /* Display: CA Adv Video Gallery: Sub Gallery List Grid View Template One */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Sub Gallery List Grid View Template One', 'ca_adv_video_gallery_sub_list_1');
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -483,7 +483,70 @@ function ca_adv_video_gallery_views_default_views() {
     'ca_adv_video_gallery' => 'ca_adv_video_gallery',
   );
   $handler->display->display_options['filters']['type']['group'] = 0;
-  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Sub Gallery View List Template One';
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Sub Gallery List Grid View Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: CA Adv Video Gallery: Gallery List Flex View Template One */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Gallery List Flex View Template One', 'ca_adv_video_gallery_flex_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Gallery List Flex View Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: CA Adv Video Gallery: Sub Gallery List Flex View Template One */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Sub Gallery List Flex View Template One', 'ca_adv_video_gallery_sub_flex_1');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Parent Video Gallery (field_ca_adv_videog_p_gallery) */
+  $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['id'] = 'field_ca_adv_videog_p_gallery_target_id';
+  $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['table'] = 'field_data_field_ca_adv_videog_p_gallery';
+  $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['field'] = 'field_ca_adv_videog_p_gallery_target_id';
+  $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_ca_adv_videog_p_gallery_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ca_adv_video_gallery' => 'ca_adv_video_gallery',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 0;
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Sub Gallery List Flex View Template One';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
@@ -819,16 +882,16 @@ function ca_adv_video_gallery_views_default_views() {
     'ca_adv_video_gallery_video' => 'ca_adv_video_gallery_video',
   );
 
-  /* Display: CA Adv Video Gallery: Video List View Template One */
-  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Video List View Template One', 'adv_video_list_1');
+  /* Display: CA Adv Video Gallery: Video List Grid View Template One */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Video List Grid View Template One', 'adv_video_list_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Video List View Template One';
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Video List Grid View Template One';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
 
-  /* Display: CA Adv Video Gallery: Video List View Template Two */
-  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Video List View Template Two', 'adv_video_list_2');
+  /* Display: CA Adv Video Gallery: Video List Grid View Template Two */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Video List Grid View Template Two', 'adv_video_list_2');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -843,7 +906,7 @@ function ca_adv_video_gallery_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Video List View Template Two';
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Video List Grid View Template Two';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
@@ -897,6 +960,40 @@ function ca_adv_video_gallery_views_default_views() {
     'trim_length' => '625',
   );
   $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Video List View Template Three';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: CA Adv Video Gallery: Video List Flex View Template One */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Video List Flex View Template One', 'adv_video_flex_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Video List Flex View Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
+
+  /* Display: CA Adv Video Gallery: Video List Flex View Template Two */
+  $handler = $view->new_display('panel_pane', 'CA Adv Video Gallery: Video List Flex View Template Two', 'adv_video_flex_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '8';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Adv Video Gallery: Video List Flex View Template Two';
   $handler->display->display_options['pane_category']['name'] = 'CA List';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';

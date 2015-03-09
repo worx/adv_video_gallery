@@ -19,7 +19,7 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'CA Adv Video Gallery: Gallery Video View Template 1',
+    'title' => 'CA Adv Video Gallery: Gallery Video Grid View Template 1',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -66,7 +66,7 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-e6ecefc5-986d-4ece-862a-05598adc313f';
+    $pane->pid = 'new-d60a9102-f1f0-4ff3-a306-be8eff572def';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_sub_list_1';
@@ -81,11 +81,11 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'e6ecefc5-986d-4ece-862a-05598adc313f';
-    $display->content['new-e6ecefc5-986d-4ece-862a-05598adc313f'] = $pane;
-    $display->panels['middle'][0] = 'new-e6ecefc5-986d-4ece-862a-05598adc313f';
+    $pane->uuid = 'd60a9102-f1f0-4ff3-a306-be8eff572def';
+    $display->content['new-d60a9102-f1f0-4ff3-a306-be8eff572def'] = $pane;
+    $display->panels['middle'][0] = 'new-d60a9102-f1f0-4ff3-a306-be8eff572def';
     $pane = new stdClass();
-    $pane->pid = 'new-066d6601-7b36-4b5b-95a5-d9ce4867bfce';
+    $pane->pid = 'new-0e130cf7-6508-4fd4-ad4e-12f7af936c69';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_adv_video_gallery_video_list-adv_video_list_1';
@@ -100,9 +100,47 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '066d6601-7b36-4b5b-95a5-d9ce4867bfce';
-    $display->content['new-066d6601-7b36-4b5b-95a5-d9ce4867bfce'] = $pane;
-    $display->panels['middle'][1] = 'new-066d6601-7b36-4b5b-95a5-d9ce4867bfce';
+    $pane->uuid = '0e130cf7-6508-4fd4-ad4e-12f7af936c69';
+    $display->content['new-0e130cf7-6508-4fd4-ad4e-12f7af936c69'] = $pane;
+    $display->panels['middle'][1] = 'new-0e130cf7-6508-4fd4-ad4e-12f7af936c69';
+    $pane = new stdClass();
+    $pane->pid = 'new-df4f927c-bdce-4032-b378-a744b7008e57';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_sub_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'df4f927c-bdce-4032-b378-a744b7008e57';
+    $display->content['new-df4f927c-bdce-4032-b378-a744b7008e57'] = $pane;
+    $display->panels['middle'][2] = 'new-df4f927c-bdce-4032-b378-a744b7008e57';
+    $pane = new stdClass();
+    $pane->pid = 'new-0b86c85d-ccc2-4c7f-b85b-b20c0b16010b';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_video_list-adv_video_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '0b86c85d-ccc2-4c7f-b85b-b20c0b16010b';
+    $display->content['new-0b86c85d-ccc2-4c7f-b85b-b20c0b16010b'] = $pane;
+    $display->panels['middle'][3] = 'new-0b86c85d-ccc2-4c7f-b85b-b20c0b16010b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -117,7 +155,7 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'CA Adv Video Gallery: Gallery Video View Template 2',
+    'title' => 'CA Adv Video Gallery: Gallery Video Grid View Template 2',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -215,7 +253,7 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'CA Adv Video Gallery: Gallery Video View Template 3',
+    'title' => 'CA Adv Video Gallery: Gallery Video Grid View Template 3',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -507,6 +545,300 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ca_adv_video_gallery_video_node_view_panel_context_2'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'ca_adv_video_gallery_video_node_view_panel_context_3';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 8;
+  $handler->conf = array(
+    'title' => 'CA Adv Video Gallery: Gallery Video Flex View Template 1',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'ca_adv_video_gallery' => 'ca_adv_video_gallery',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_video_gallery_list_template',
+          'settings' => array(
+            'ca_adv_video_gallery_list_template' => 'ca_adv_video_gallery_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-video-galllery-category-flex ca-video-gallery-category-flex-template-1',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = 'f2fd7da2-f9e2-4145-85dd-e1ac21f8d416';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-df4f927c-bdce-4032-b378-a744b7008e57';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_sub_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'df4f927c-bdce-4032-b378-a744b7008e57';
+    $display->content['new-df4f927c-bdce-4032-b378-a744b7008e57'] = $pane;
+    $display->panels['middle'][0] = 'new-df4f927c-bdce-4032-b378-a744b7008e57';
+    $pane = new stdClass();
+    $pane->pid = 'new-0b86c85d-ccc2-4c7f-b85b-b20c0b16010b';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_video_list-adv_video_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '0b86c85d-ccc2-4c7f-b85b-b20c0b16010b';
+    $display->content['new-0b86c85d-ccc2-4c7f-b85b-b20c0b16010b'] = $pane;
+    $display->panels['middle'][1] = 'new-0b86c85d-ccc2-4c7f-b85b-b20c0b16010b';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['ca_adv_video_gallery_video_node_view_panel_context_3'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'ca_adv_video_gallery_video_node_view_panel_context_4';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 9;
+  $handler->conf = array(
+    'title' => 'CA Adv Video Gallery: Gallery Video Flex View Template 2',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'ca_adv_video_gallery' => 'ca_adv_video_gallery',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_video_gallery_list_template',
+          'settings' => array(
+            'ca_adv_video_gallery_list_template' => 'ca_adv_video_gallery_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-video-galllery-category-flex ca-video-gallery-category-flex-template-2',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = 'f0991430-31c9-4d4a-be07-b3920ea0db3c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-42465636-8200-4285-85ee-8c94bf4581d2';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_sub_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '42465636-8200-4285-85ee-8c94bf4581d2';
+    $display->content['new-42465636-8200-4285-85ee-8c94bf4581d2'] = $pane;
+    $display->panels['middle'][0] = 'new-42465636-8200-4285-85ee-8c94bf4581d2';
+    $pane = new stdClass();
+    $pane->pid = 'new-92be93da-25c8-4391-8168-a3a8dec71d74';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_video_list-adv_video_flex_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '92be93da-25c8-4391-8168-a3a8dec71d74';
+    $display->content['new-92be93da-25c8-4391-8168-a3a8dec71d74'] = $pane;
+    $display->panels['middle'][1] = 'new-92be93da-25c8-4391-8168-a3a8dec71d74';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['ca_adv_video_gallery_video_node_view_panel_context_4'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'ca_adv_video_gallery_video_node_view_panel_context_5';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 10;
+  $handler->conf = array(
+    'title' => 'CA Adv Video Gallery: Gallery Video Flex View Template 3',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'ca_adv_video_gallery' => 'ca_adv_video_gallery',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_adv_video_gallery_list_template',
+          'settings' => array(
+            'ca_adv_video_gallery_list_template' => 'ca_adv_video_gallery_list_template_three',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-video-galllery-category-flex ca-video-gallery-category-flex-template-3',
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->uuid = '68d61128-6cf6-45fa-bc9f-5ebc97109b9d';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-14a53122-1245-4b44-9ee1-7da86c86f90b';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_sub_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '14a53122-1245-4b44-9ee1-7da86c86f90b';
+    $display->content['new-14a53122-1245-4b44-9ee1-7da86c86f90b'] = $pane;
+    $display->panels['middle'][0] = 'new-14a53122-1245-4b44-9ee1-7da86c86f90b';
+    $pane = new stdClass();
+    $pane->pid = 'new-6d1b10e3-182c-4ed6-bb16-0feb3df27970';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_video_list-adv_video_list_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '6d1b10e3-182c-4ed6-bb16-0feb3df27970';
+    $display->content['new-6d1b10e3-182c-4ed6-bb16-0feb3df27970'] = $pane;
+    $display->panels['middle'][1] = 'new-6d1b10e3-182c-4ed6-bb16-0feb3df27970';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['ca_adv_video_gallery_video_node_view_panel_context_5'] = $handler;
 
   return $export;
 }
@@ -1081,7 +1413,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'ca_adv_video_gallery_list_view';
   $page->task = 'page';
-  $page->admin_title = 'CA Adv Video Gallery Admin: List View';
+  $page->admin_title = 'CA Adv Video Gallery: List View';
   $page->admin_description = '';
   $page->path = 'video-gallery/view';
   $page->access = array(
@@ -1114,7 +1446,7 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'CA Adv Video Gallery Admin: List View',
+    'title' => 'CA Adv Video Gallery: List Grid View Template 1',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -1123,6 +1455,239 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     'relationships' => array(),
     'body_classes_to_remove' => '',
     'body_classes_to_add' => 'ca-video-galllery-list ca-video-gallery-list-template-1',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_video_gallery_list_template',
+          'settings' => array(
+            'ca_adv_video_gallery_list_template' => 'ca_adv_video_gallery_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Video Gallery';
+  $display->uuid = 'a602495b-7847-4a00-b42f-7f5d44ed6a9c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_list_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d';
+    $display->content['new-a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d'] = $pane;
+    $display->panels['middle'][0] = 'new-a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_video_gallery_list_view_panel_context_2';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_video_gallery_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'CA Adv Video Gallery: List Flex View Template 1',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-video-galllery-flex ca-video-gallery-flex-template-1',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_video_gallery_list_template',
+          'settings' => array(
+            'ca_adv_video_gallery_list_template' => 'ca_adv_video_gallery_list_template_one',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Video Gallery';
+  $display->uuid = 'a602495b-7847-4a00-b42f-7f5d44ed6a9c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_list_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d';
+    $display->content['new-a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d'] = $pane;
+    $display->panels['middle'][0] = 'new-a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d';
+    $pane = new stdClass();
+    $pane->pid = 'new-894823cc-5ed5-4cad-a787-9e44f0a232ab';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_video_list-adv_video_flex_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array();
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '894823cc-5ed5-4cad-a787-9e44f0a232ab';
+    $display->content['new-894823cc-5ed5-4cad-a787-9e44f0a232ab'] = $pane;
+    $display->panels['middle'][1] = 'new-894823cc-5ed5-4cad-a787-9e44f0a232ab';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_video_gallery_list_view_panel_context_3';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_video_gallery_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = 2;
+  $handler->conf = array(
+    'title' => 'CA Adv Video Gallery: List Grid View Template 2',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-video-galllery-list ca-video-gallery-list-template-2',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_video_gallery_list_template',
+          'settings' => array(
+            'ca_adv_video_gallery_list_template' => 'ca_adv_video_gallery_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Video Gallery';
+  $display->uuid = 'a602495b-7847-4a00-b42f-7f5d44ed6a9c';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_list_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d';
+    $display->content['new-a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d'] = $pane;
+    $display->panels['middle'][0] = 'new-a9b88f44-b8d1-45bd-b3fe-17a080d2ff1d';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_video_gallery_list_view_panel_context_4';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_video_gallery_list_view';
+  $handler->handler = 'panel_context';
+  $handler->weight = 3;
+  $handler->conf = array(
+    'title' => 'CA Adv Video Gallery: List Flex View Template 2',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-video-galllery-flex ca-video-gallery-flex-template-2',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'ca_adv_video_gallery_list_template',
+          'settings' => array(
+            'ca_adv_video_gallery_list_template' => 'ca_adv_video_gallery_list_template_two',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'onecol';

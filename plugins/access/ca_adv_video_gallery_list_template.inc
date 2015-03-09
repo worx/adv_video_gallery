@@ -27,7 +27,9 @@ function ca_adv_video_gallery_list_template_access_settings($form, &$form_state,
     '#title' => t('Video Galleries: Video list template'),
     '#options' => array(
       'ca_adv_video_gallery_list_template_one' => t('Template one'),
+      'ca_adv_video_gallery_list_template_one_flex' => t('Template one Flex'),
       'ca_adv_video_gallery_list_template_two' => t('Template two'),
+      'ca_adv_video_gallery_list_template_two_flex' => t('Template two Flex'),
       'ca_adv_video_gallery_list_template_three' => t('Template three'),
     ),
     '#required' => TRUE,
@@ -57,8 +59,14 @@ function ca_adv_video_gallery_list_template_access_summary($conf, $context) {
   if ($conf['ca_adv_video_gallery_list_template'] == 'ca_adv_video_gallery_list_template_one') {
     $template = t('Template one');
   }
+  elseif ($conf['ca_adv_video_gallery_list_template'] == 'ca_adv_video_gallery_list_template_one_flex') {
+    $template = t('Template one Flex');
+  }
   elseif ($conf['ca_adv_video_gallery_list_template'] == 'ca_adv_video_gallery_list_template_two') {
     $template = t('Template two');
+  }
+  elseif ($conf['ca_adv_video_gallery_list_template'] == 'ca_adv_video_gallery_list_template_two_flex') {
+    $template = t('Template two Flex');
   }
   else {
     $template = t('Template three');

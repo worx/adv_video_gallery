@@ -38,14 +38,14 @@ function ca_adv_video_gallery_install() {
   /**
    * Sets the Video Gallery Admin role to have permission to
    * create files, access media browser,
-   * add media from remote sources, assign node weights.
+   * add media from remote sources, assign node weight.
    */
   user_role_change_permissions(250184028, 
     array(
       'create files' => TRUE,
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
-      'assign node weights' => TRUE,
+      'assign node weight' => TRUE,
     )
   );
   
@@ -66,7 +66,7 @@ function ca_adv_video_gallery_install() {
 /**
  * Setting worx_aurora_base_enable default so that panels can work corretly when aura base feature is not enabled.
  * Sets the Video Gallery Admin role to have permission to create files, access media browser,
- * add media from remote sources, assign node weights.
+ * add media from remote sources, assign node weight.
  * Sets the Video Gallery Creator role to have permission to create files, access media browser,
  * add media from remote sources.
  */
@@ -77,14 +77,14 @@ function ca_adv_video_gallery_update_7000() {
   /**
    * Sets the Video Gallery Admin role to have permission to
    * create files, access media browser,
-   * add media from remote sources, assign node weights.
+   * add media from remote sources, assign node weight.
    */
   user_role_change_permissions(250184028, 
     array(
       'create files' => TRUE,
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
-      'assign node weights' => TRUE,
+      'assign node weight' => TRUE,
     )
   );
   

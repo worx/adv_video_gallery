@@ -10,7 +10,8 @@
 function ca_adv_video_gallery_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ca_adv_video_gallery-field_ca_adv_videog_p_gallery'
+  // Exported field_instance:
+  // 'node-ca_adv_video_gallery-field_ca_adv_videog_p_gallery'
   $field_instances['node-ca_adv_video_gallery-field_ca_adv_videog_p_gallery'] = array(
     'bundle' => 'ca_adv_video_gallery',
     'default_value' => NULL,
@@ -53,7 +54,8 @@ function ca_adv_video_gallery_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_adv_video_gallery-field_ca_adv_videog_vg_image'
+  // Exported field_instance:
+  // 'node-ca_adv_video_gallery-field_ca_adv_videog_vg_image'
   $field_instances['node-ca_adv_video_gallery-field_ca_adv_videog_vg_image'] = array(
     'bundle' => 'ca_adv_video_gallery',
     'deleted' => 0,
@@ -145,7 +147,8 @@ function ca_adv_video_gallery_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_adv_video_gallery_video-field_ca_video_gallery_parent'
+  // Exported field_instance:
+  // 'node-ca_adv_video_gallery_video-field_ca_video_gallery_parent'
   $field_instances['node-ca_adv_video_gallery_video-field_ca_video_gallery_parent'] = array(
     'bundle' => 'ca_adv_video_gallery_video',
     'default_value' => NULL,

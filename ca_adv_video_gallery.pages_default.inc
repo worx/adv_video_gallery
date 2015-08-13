@@ -103,44 +103,6 @@ function ca_adv_video_gallery_default_page_manager_handlers() {
     $pane->uuid = '0e130cf7-6508-4fd4-ad4e-12f7af936c69';
     $display->content['new-0e130cf7-6508-4fd4-ad4e-12f7af936c69'] = $pane;
     $display->panels['middle'][1] = 'new-0e130cf7-6508-4fd4-ad4e-12f7af936c69';
-    $pane = new stdClass();
-    $pane->pid = 'new-df4f927c-bdce-4032-b378-a744b7008e57';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery_list-ca_adv_video_gallery_sub_flex_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = 'df4f927c-bdce-4032-b378-a744b7008e57';
-    $display->content['new-df4f927c-bdce-4032-b378-a744b7008e57'] = $pane;
-    $display->panels['middle'][2] = 'new-df4f927c-bdce-4032-b378-a744b7008e57';
-    $pane = new stdClass();
-    $pane->pid = 'new-0b86c85d-ccc2-4c7f-b85b-b20c0b16010b';
-    $pane->panel = 'middle';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ca_adv_video_gallery_video_list-adv_video_flex_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = '0b86c85d-ccc2-4c7f-b85b-b20c0b16010b';
-    $display->content['new-0b86c85d-ccc2-4c7f-b85b-b20c0b16010b'] = $pane;
-    $display->panels['middle'][3] = 'new-0b86c85d-ccc2-4c7f-b85b-b20c0b16010b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -2192,29 +2154,6 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_ca_adv_video_gallery_add_sub_gallery_menu_context';
-  $handler->task = 'page';
-  $handler->subtask = 'ca_adv_video_gallery_add_sub_gallery';
-  $handler->handler = 'menu_context';
-  $handler->weight = -29;
-  $handler->conf = array(
-    'title' => 'Context Admin',
-    'no_blocks' => FALSE,
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-    'context_admin_options' => 'entityref_create_node:ca_adv_video_gallery:field_ca_adv_videog_p_gallery',
-    'context_admin_options_items' => 'ca_adv_video_gallery',
-    'context_admin_use_node_edit' => 0,
-    'submitted_context' => 'argument_entity_id:node_1',
-    'context_admin_field' => 'field_ca_adv_videog_p_gallery',
-    'context_admin_custom_redirect' => '',
-  );
-  $page->default_handlers[$handler->name] = $handler;
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
   $handler->name = 'page_ca_adv_video_gallery_add_sub_gallery__aurora_adv_video_gallery_add_sub';
   $handler->task = 'page';
   $handler->subtask = 'ca_adv_video_gallery_add_sub_gallery';
@@ -2231,6 +2170,18 @@ function ca_adv_video_gallery_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'name' => 'aurora_adv_video_gallery_add_sub',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'worx_aurora';
@@ -2323,6 +2274,29 @@ function ca_adv_video_gallery_default_page_manager_pages() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-b981b9ff-c92e-4712-a170-eb056bd06542';
   $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_adv_video_gallery_add_sub_gallery_menu_context';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_adv_video_gallery_add_sub_gallery';
+  $handler->handler = 'menu_context';
+  $handler->weight = -29;
+  $handler->conf = array(
+    'title' => 'Context Admin',
+    'no_blocks' => FALSE,
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'context_admin_options' => 'entityref_create_node:ca_adv_video_gallery:field_ca_adv_videog_p_gallery',
+    'context_admin_options_items' => 'ca_adv_video_gallery',
+    'context_admin_use_node_edit' => 0,
+    'submitted_context' => 'argument_entity_id:node_1',
+    'context_admin_field' => 'field_ca_adv_videog_p_gallery',
+    'context_admin_custom_redirect' => '',
+  );
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_adv_video_gallery_add_sub_gallery'] = $page;
 

@@ -11,7 +11,7 @@ function ca_adv_video_gallery_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
-  // 'node-ca_adv_video_gallery-field_ca_adv_videog_p_gallery'
+  // 'node-ca_adv_video_gallery-field_ca_adv_videog_p_gallery'.
   $field_instances['node-ca_adv_video_gallery-field_ca_adv_videog_p_gallery'] = array(
     'bundle' => 'ca_adv_video_gallery',
     'default_value' => NULL,
@@ -55,7 +55,7 @@ function ca_adv_video_gallery_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ca_adv_video_gallery-field_ca_adv_videog_vg_image'
+  // 'node-ca_adv_video_gallery-field_ca_adv_videog_vg_image'.
   $field_instances['node-ca_adv_video_gallery-field_ca_adv_videog_vg_image'] = array(
     'bundle' => 'ca_adv_video_gallery',
     'deleted' => 0,
@@ -97,6 +97,18 @@ function ca_adv_video_gallery_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'manualcrop_crop_info' => TRUE,
+        'manualcrop_default_crop_area' => TRUE,
+        'manualcrop_enable' => FALSE,
+        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => TRUE,
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => FALSE,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -105,7 +117,7 @@ function ca_adv_video_gallery_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_adv_video_gallery_video-body'
+  // Exported field_instance: 'node-ca_adv_video_gallery_video-body'.
   $field_instances['node-ca_adv_video_gallery_video-body'] = array(
     'bundle' => 'ca_adv_video_gallery_video',
     'default_value' => NULL,
@@ -148,7 +160,7 @@ function ca_adv_video_gallery_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ca_adv_video_gallery_video-field_ca_video_gallery_parent'
+  // 'node-ca_adv_video_gallery_video-field_ca_video_gallery_parent'.
   $field_instances['node-ca_adv_video_gallery_video-field_ca_video_gallery_parent'] = array(
     'bundle' => 'ca_adv_video_gallery_video',
     'default_value' => NULL,
@@ -191,7 +203,7 @@ function ca_adv_video_gallery_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_adv_video_gallery_video-field_video'
+  // Exported field_instance: 'node-ca_adv_video_gallery_video-field_video'.
   $field_instances['node-ca_adv_video_gallery_video-field_video'] = array(
     'bundle' => 'ca_adv_video_gallery_video',
     'deleted' => 0,
@@ -247,6 +259,18 @@ function ca_adv_video_gallery_field_default_field_instances() {
           'upload' => 0,
           'youtube' => 0,
         ),
+        'manualcrop_crop_info' => TRUE,
+        'manualcrop_default_crop_area' => TRUE,
+        'manualcrop_enable' => FALSE,
+        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => TRUE,
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => FALSE,
       ),
       'type' => 'media_generic',
       'weight' => 1,

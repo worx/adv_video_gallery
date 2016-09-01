@@ -241,6 +241,20 @@ function ca_adv_video_gallery_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_ca_adv_video_gallery_pattern';
+  $strongarm->value = 'video-gallery/[node:field_ca_adv_videog_p_gallery]/[node:title]';
+  $export['pathauto_node_ca_adv_video_gallery_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_ca_adv_video_gallery_video_pattern';
+  $strongarm->value = 'video-gallery/[node:field_ca_video_gallery_parent]/[node:title]';
+  $export['pathauto_node_ca_adv_video_gallery_video_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_ca_adv_video_gallery';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_ca_adv_video_gallery'] = $strongarm;

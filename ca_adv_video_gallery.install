@@ -42,16 +42,6 @@ function ca_adv_video_gallery_install() {
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
       'assign node weight' => TRUE,
-      'create ca_adv_video_gallery content' => TRUE,
-      'create ca_adv_video_gallery_video content' => TRUE,
-      'delete any ca_adv_video_gallery content' => TRUE,
-      'delete any ca_adv_video_gallery_video content' => TRUE,
-      'delete own ca_adv_video_gallery content' => TRUE,
-      'delete own ca_adv_video_gallery_video content' => TRUE,
-      'edit any ca_adv_video_gallery content' => TRUE,
-      'edit any ca_adv_video_gallery_video content' => TRUE,
-      'edit own ca_adv_video_gallery content' => TRUE,
-      'edit own ca_adv_video_gallery_video content' => TRUE,
     )
   );
   
@@ -61,12 +51,6 @@ function ca_adv_video_gallery_install() {
       'create files' => TRUE,
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
-      'create ca_adv_video_gallery content' => TRUE,
-      'create ca_adv_video_gallery_video content' => TRUE,
-      'delete own ca_adv_video_gallery content' => TRUE,
-      'delete own ca_adv_video_gallery_video content' => TRUE,
-      'edit own ca_adv_video_gallery content' => TRUE,
-      'edit own ca_adv_video_gallery_video content' => TRUE,
     )
   );
 
@@ -77,16 +61,6 @@ function ca_adv_video_gallery_install() {
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
       'assign node weight' => TRUE,
-      'create ca_adv_video_gallery content' => TRUE,
-      'create ca_adv_video_gallery_video content' => TRUE,
-      'delete any ca_adv_video_gallery content' => TRUE,
-      'delete any ca_adv_video_gallery_video content' => TRUE,
-      'delete own ca_adv_video_gallery content' => TRUE,
-      'delete own ca_adv_video_gallery_video content' => TRUE,
-      'edit any ca_adv_video_gallery content' => TRUE,
-      'edit any ca_adv_video_gallery_video content' => TRUE,
-      'edit own ca_adv_video_gallery content' => TRUE,
-      'edit own ca_adv_video_gallery_video content' => TRUE,
     )
   );
 
@@ -97,16 +71,6 @@ function ca_adv_video_gallery_install() {
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
       'assign node weight' => TRUE,
-      'create ca_adv_video_gallery content' => TRUE,
-      'create ca_adv_video_gallery_video content' => TRUE,
-      'delete any ca_adv_video_gallery content' => TRUE,
-      'delete any ca_adv_video_gallery_video content' => TRUE,
-      'delete own ca_adv_video_gallery content' => TRUE,
-      'delete own ca_adv_video_gallery_video content' => TRUE,
-      'edit any ca_adv_video_gallery content' => TRUE,
-      'edit any ca_adv_video_gallery_video content' => TRUE,
-      'edit own ca_adv_video_gallery content' => TRUE,
-      'edit own ca_adv_video_gallery_video content' => TRUE,
     )
   );
 }
@@ -162,16 +126,6 @@ function ca_adv_video_gallery_update_7001() {
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
       'assign node weight' => TRUE,
-      'create ca_adv_video_gallery content' => TRUE,
-      'create ca_adv_video_gallery_video content' => TRUE,
-      'delete any ca_adv_video_gallery content' => TRUE,
-      'delete any ca_adv_video_gallery_video content' => TRUE,
-      'delete own ca_adv_video_gallery content' => TRUE,
-      'delete own ca_adv_video_gallery_video content' => TRUE,
-      'edit any ca_adv_video_gallery content' => TRUE,
-      'edit any ca_adv_video_gallery_video content' => TRUE,
-      'edit own ca_adv_video_gallery content' => TRUE,
-      'edit own ca_adv_video_gallery_video content' => TRUE,
     )
   );
   
@@ -181,12 +135,6 @@ function ca_adv_video_gallery_update_7001() {
       'create files' => TRUE,
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
-      'create ca_adv_video_gallery content' => TRUE,
-      'create ca_adv_video_gallery_video content' => TRUE,
-      'delete own ca_adv_video_gallery content' => TRUE,
-      'delete own ca_adv_video_gallery_video content' => TRUE,
-      'edit own ca_adv_video_gallery content' => TRUE,
-      'edit own ca_adv_video_gallery_video content' => TRUE,
     )
   );
 
@@ -197,16 +145,6 @@ function ca_adv_video_gallery_update_7001() {
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
       'assign node weight' => TRUE,
-      'create ca_adv_video_gallery content' => TRUE,
-      'create ca_adv_video_gallery_video content' => TRUE,
-      'delete any ca_adv_video_gallery content' => TRUE,
-      'delete any ca_adv_video_gallery_video content' => TRUE,
-      'delete own ca_adv_video_gallery content' => TRUE,
-      'delete own ca_adv_video_gallery_video content' => TRUE,
-      'edit any ca_adv_video_gallery content' => TRUE,
-      'edit any ca_adv_video_gallery_video content' => TRUE,
-      'edit own ca_adv_video_gallery content' => TRUE,
-      'edit own ca_adv_video_gallery_video content' => TRUE,
     )
   );
 
@@ -217,16 +155,6 @@ function ca_adv_video_gallery_update_7001() {
       'access media browser' => TRUE,
       'add media from remote sources' => TRUE,
       'assign node weight' => TRUE,
-      'create ca_adv_video_gallery content' => TRUE,
-      'create ca_adv_video_gallery_video content' => TRUE,
-      'delete any ca_adv_video_gallery content' => TRUE,
-      'delete any ca_adv_video_gallery_video content' => TRUE,
-      'delete own ca_adv_video_gallery content' => TRUE,
-      'delete own ca_adv_video_gallery_video content' => TRUE,
-      'edit any ca_adv_video_gallery content' => TRUE,
-      'edit any ca_adv_video_gallery_video content' => TRUE,
-      'edit own ca_adv_video_gallery content' => TRUE,
-      'edit own ca_adv_video_gallery_video content' => TRUE,
     )
   );
 }

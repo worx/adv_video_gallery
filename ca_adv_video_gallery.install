@@ -28,9 +28,9 @@ function ca_adv_video_gallery_install() {
   variable_set('imce_roles_profiles', $imce_roles_profiles);
 
   // Set the Pathauto for the node.
-  variable_set('pathauto_node_ca_adv_video_gallery_pattern', 'video-gallery/[node:field_ca_adv_videog_p_gallery]/[node:title]');
+  variable_set('pathauto_node_ca_adv_video_gallery_pattern', 'video-gallery/[node:adv_video_category_hierarchy]/[node:worx_title]');
 
-  variable_set('pathauto_node_ca_adv_video_gallery_video_pattern', 'video-gallery/[node:field_ca_video_gallery_parent]/[node:title]');
+  variable_set('pathauto_node_ca_adv_video_gallery_video_pattern', '[node:adv_video_video_path]/[node:worx_title]');
 
   // Get the worx_aurora_base_enable variable to default set if not already set.
   variable_get('worx_aurora_base_enable', 'worx_aurora_base_disabled');
@@ -115,29 +115,10 @@ function ca_adv_video_gallery_update_7000() {
 }
 
 /**
- * Set the permissions for Adv Video Gallery Admin, Adv Video Gallery Creator, Webmaster and Administrator as a one time event rather than handled with features to 
+ * Set the permissions for Webmaster and Administrator as a one time event rather than handled with features to 
  * allow additonal roles to be given these permissions without overridding the feature.
  */
 function ca_adv_video_gallery_update_7001() {
-  // Set the permissions for Video Gallery Admin
-  user_role_change_permissions(250184028, 
-    array(
-      'create files' => TRUE,
-      'access media browser' => TRUE,
-      'add media from remote sources' => TRUE,
-      'assign node weight' => TRUE,
-    )
-  );
-  
-  // Set the permissions for Video Gallery Creator
-  user_role_change_permissions(135507392, 
-    array(
-      'create files' => TRUE,
-      'access media browser' => TRUE,
-      'add media from remote sources' => TRUE,
-    )
-  );
-
   // Set the permissions for Administrator
   user_role_change_permissions(3, 
     array(
@@ -157,4 +138,30 @@ function ca_adv_video_gallery_update_7001() {
       'assign node weight' => TRUE,
     )
   );
+}
+
+/**
+ * Updated the path to allow for full hierarchy
+ */
+function ca_adv_video_gallery_update_7002() {
+  $setslash = FALSE;
+
+  $catpath = variable_get('pathauto_node_ca_adv_video_gallery_pattern', '');
+  if ($catpath == 'video-gallery/[node:field_ca_adv_videog_p_gallery]/[node:title]' || $catpath == '') {
+    variable_set('pathauto_node_ca_adv_video_gallery_pattern', 'video-gallery/[node:adv_video_category_hierarchy]/[node:worx_title]');
+
+    $setslash = TRUE;
+  }
+
+  $vidpath = variable_get('pathauto_node_ca_adv_video_gallery_video_pattern', '');
+  if ($vidpath == 'video-gallery/[node:field_ca_video_gallery_parent]/[node:title]' || $vidpath == '') {
+    variable_set('pathauto_node_ca_adv_video_gallery_video_pattern', '[node:adv_video_video_path]/[node:worx_title]');
+
+    $setslash = TRUE;
+  }
+  
+  if ($setslash === TRUE) {
+    // Set the Pathauto Slash setting to do not remove because of the hierarchy fix to product.
+    variable_set('pathauto_punctuation_slash', '2');
+  }
 }

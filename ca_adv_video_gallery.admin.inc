@@ -64,11 +64,13 @@ function ca_adv_video_gallery_settings_form() {
     '#title' => t('Video Galleries Video list template'),
     '#options' => array(
       'ca_adv_video_gallery_list_template_one' => t('Template one'),
+      'ca_adv_video_gallery_list_template_one_flex' => t('Template one Flex'),
       'ca_adv_video_gallery_list_template_two' => t('Template two'),
+      'ca_adv_video_gallery_list_template_two_flex' => t('Template two Flex'),
       'ca_adv_video_gallery_list_template_three' => t('Template three'),
     ),
     '#required' => TRUE,
-    '#default_value' => variable_get('ca_adv_video_gallery_list_template', 'ca_adv_video_gallery_list_template_one'),
+    '#default_value' => variable_get('ca_adv_video_gallery_list_template', 'ca_adv_video_gallery_list_template_one_flex'),
   );
   $form['ca_adv_video_gallery_node_template'] = array(
     '#type' => 'select',
